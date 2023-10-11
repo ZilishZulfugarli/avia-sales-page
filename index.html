@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/71a0b6e05b.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/png" href="images/Symbols.png" />
+    <title>FickleFlight</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="logo">
+            <img src="images/Symbols.png" alt="logo.img">
+        </div>
+        <div class="navbar">
+            <div class="navigation-menu">
+                <ul>
+                    <li><a href="">Explore</a></li>
+                    <li><a href="">Search</a></li>
+                    <li><a href="">Hotels</a></li>
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                </ul>
+            </div>
+        </div>
+
+
+        <i class="fa-solid fa-bars hamburger-icon" style="color: #0041b3;"></i>
+
+
+
+
+
+    </section>
+
+
+    <section class="search">
+        <div class="side-menu" id="side-menu">
+            <div class="hamburger-menu">
+                <ul>
+                    <li><a href="">Explore</a></li>
+                    <li><a href="">Search</a></li>
+                    <li><a href="">Hotels</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-background">
+            <div class="search-container">
+                <h2 class="search-title">Let’s explore & travel the world</h2>
+                <p class="search-text">Find the best destinations and the most popular stays!</p>
+
+                <div class="search-form">
+                    <div class="upper-side">
+
+                        <p class="form-title">Search Flight</p>
+
+
+                        <div class="search-label">
+                            <div class="return">
+                                <input type="radio" id="return" name="fav_language" value="return">
+                                <label for="html">Return</label>
+                            </div>
+
+                            <div class="one-way">
+                                <input type="radio" id="one-way" name="fav_language" value="one-way">
+                                <label for="html">One Way</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <div class="inputs">
+                            <div class="col4">
+                                <fieldset>
+                                    <legend style="right: 0;">Departure
+                                    </legend>
+                                    <input type="text" placeholder="Singapore (SIN)">
+                                </fieldset>
+                            </div>
+                            <div class="col4">
+                                <fieldset>
+
+                                    <legend>Arrival</legend>
+                                    <input type="text" placeholder="Singapore (SIN)">
+                                </fieldset>
+                            </div>
+                            <div class="col4 date">
+                                <fieldset>
+                                    <legend>Date</legend>
+                                    <input type="date" placeholder="Singapore (SIN)">
+                                </fieldset>
+                                <!-- <fieldset>
+                                    <legend>Date</legend>
+                                    <input type="date" placeholder="Singapore (SIN)">
+                                </fieldset> -->
+                            </div>
+                            <div class="search-button">
+                                <div class="search-text">
+                                    <p>search flights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+    <section class="home">
+        <div class="upcoming-flight">
+            <p class="upcoming-text">Recent Searches</p>
+            <div class="recent-search">
+                <div class="flight-container">
+                    <div class="from-to">
+                        <p class="flight-name">SIN</p>
+                        <i class="fa-solid fa-plane plane-icon"></i>
+                        <p class="flight-name">LAX</p>
+                    </div>
+                    <p class="flight-info"><span class="depart">Depart on:</span> 7 Sep 2021</p>
+                </div>
+                <div class="flight-container">
+                    <div class="from-to">
+                        <p class="flight-name">MY</p>
+                        <i class="fa-solid fa-plane plane-icon"></i>
+                        <p class="flight-name">DUB</p>
+                    </div>
+                    <p class="flight-info"><span class="depart">Depart on:</span> 9 Sep 2021</p>
+                </div>
+
+            </div>
+            <div class="prepare-menu">
+                <p class="prepare-text">Prepare for your trip</p>
+                <div class="trip-menus">
+                    <div class="trip-sections">
+                        <img src="images/Hotel Icon.png" alt="">
+                        <p class="trip-names">Hotel</p>
+                    </div>
+                    <div class="trip-sections">
+                        <img src="images/Attractions Icon.png" alt="">
+                        <p class="trip-names">Attractions</p>
+                    </div>
+                    <div class="trip-sections">
+                        <img src="images/Eats Icon.png" alt="">
+                        <p class="trip-names">Eats</p>
+                    </div>
+                    <div class="trip-sections">
+                        <img src="images/Commute icon.png" alt="">
+                        <p class="trip-names">Commute</p>
+                    </div>
+                    <div class="trip-sections">
+                        <img src="images/Taxi Icon.png" alt="">
+                        <p class="trip-names">Taxi</p>
+                    </div>
+                    <div class="trip-sections">
+                        <img src="images/Movies icon.png" alt="">
+                        <p class="trip-names">Movies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-destinations">
+            <div class="destination-titles">
+                <div class="title-container">
+                    <p class="plan-text">Plan your next trip</p>
+                    <p class="recommend-title">Most Popular Destinations</p>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="col">
+                    <div id="paris">
+                        <div class="destination-details">
+                            <p class="destination-name">Paris</p>
+                            <div>
+                                <p class="from">from</p>
+                                <p class="destination-price">$699</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="greece">
+                        <div class="destination-details">
+                            <p class="destination-name">Greece</p>
+                            <div>
+                                <p class="from">from</p>
+                                <p class="destination-price">$1079</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="norway">
+                        <div class="destination-details">
+                            <p class="destination-name">Norway</p>
+                            <div>
+                                <p class="from">from</p>
+                                <p class="destination-price">$895</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="tuscany">
+                        <div class="destination-details">
+                            <p class="destination-name">Tuscany</p>
+                            <div class="destination-right">
+                                <p class="from">from</p>
+                                <p class="destination-price">$1245</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommend-holidays">
+            <div class="holidays-titles">
+                <p class="holidays-title">Plan your next trip</p>
+            </div>
+            <div class="holiday-card-container">
+                <div class="holiday-col">
+                    <a href="">
+                        <img src="images/unsplash_5MV818tzxeo.png" alt="">
+                        <div class="holiday-details">
+                            <div class="holiday-name">
+                                <p class="country-name">Bali</p>
+                                <p class="country-code">4D3N</p>
+                            </div>
+                            <div class="holiday-price">$899</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="holiday-col">
+                    <a href="">
+                        <img src="images/SwitzerlandImage.png" alt="">
+                        <div class="holiday-details">
+                            <div class="holiday-name">
+                                <p class="country-name">Swiss</p>
+                                <p class="country-code">6D5N</p>
+                            </div>
+                            <div class="holiday-price">$900</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="holiday-col">
+                    <a href="">
+                        <img src="images/BoracayImage.png" alt="">
+                        <div class="holiday-details">
+                            <div class="holiday-name">
+                                <p class="country-name">Boracay</p>
+                                <p class="country-code">5D4N</p>
+                            </div>
+                            <div class="holiday-price">$699</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="holiday-col">
+                    <a href="">
+                        <img src="images/PalawanImage.png" alt="">
+                        <div class="holiday-details">
+                            <div class="holiday-name">
+                                <p class="country-name">Palawan</p>
+                                <p class="country-code">4D3N</p>
+                            </div>
+                            <div class="holiday-price">$789</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="popular-stays">
+            <div class="stays-header">
+                <div class="stays-title">
+                    <p>Popular Stays</p>
+                </div>
+                <div class="stays-button">
+                    <p>View all stays</p>
+                    <p class="button-icon">&#10141;</p>
+                </div>
+            </div>
+            <div class="hotel-cards">
+                <div class="hotel-col">
+                    <div class="hotel-card">
+                        <img src="images/Matterhorn Suites Image.png" alt="">
+                        <div class="hotel-details">
+                            <div class="hotel-details-row">
+                                <p class="hotel-description">Entire bungalow</p>
+                                <p class="hotel-name">Matterhorn Suites</p>
+                                <p class="hotel-price">$575/night</p>
+                            </div>
+                            <i class="fa-regular fa-circle-play video-play"></i>
+                        </div>
+                        <div class="hotel-rating">
+                            
+                            <div class="hotel-star">
+                                <i class="fa-solid fa-star star"></i>
+                                <p class="star-point">4.9</p>
+                            </div>
+
+                            <p class="hotel-review">(60 reviews)</p>
+                        </div>
+                        <div class="more-detail-button">
+                            <p>more details</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="hotel-col">
+                    <div class="hotel-card">
+                        <img src="images/Discovery Shores Image.png" alt="">
+                        <div class="hotel-details">
+                            <div class="hotel-details-row">
+                                <p class="hotel-description">2-Story beachfront suite</p>
+                                <p class="hotel-name">Discovery Shores</p>
+                                <p class="hotel-price">$360/night</p>
+                            </div>
+                            <i class="fa-regular fa-circle-play video-play"></i>
+                        </div>
+                        <div class="hotel-rating">
+                            
+                            <div class="hotel-star">
+                                <i class="fa-solid fa-star star"></i>
+                                <p class="star-point">4.8</p>
+                            </div>
+
+                            <p class="hotel-review">(116 reviews)</p>
+                        </div>
+                        <div class="more-detail-button">
+                            <p>more details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-col">
+                    <div class="hotel-card">
+                        <img src="images/Arctic Hut Image.png" alt="">
+                        <div class="hotel-details">
+                            <div class="hotel-details-row">
+                                <p class="hotel-description">Single deluxe hut</p>
+                                <p class="hotel-name">Arctic Hut</p>
+                                <p class="hotel-price">$420/night</p>
+                            </div>
+                            <i class="fa-regular fa-circle-play video-play"></i>
+                        </div>
+                        <div class="hotel-rating">
+                            
+                            <div class="hotel-star">
+                                <i class="fa-solid fa-star star"></i>
+                                <p class="star-point">4.7</p>
+                            </div>
+
+                            <p class="hotel-review">(78 reviews)</p>
+                        </div>
+                        <div class="more-detail-button">
+                            <p>more details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-col">
+                    <div class="hotel-card">
+                        <img src="images/Lake Louise Image.png" alt="">
+                        <div class="hotel-details">
+                            <div class="hotel-details-row">
+                                <p class="hotel-description">Deluxe King Room</p>
+                                <p class="hotel-name">Lake Louise Inn</p>
+                                <p class="hotel-price">$244/night</p>
+                            </div>
+                            <div class="video-button">
+                                <i class="fa-regular fa-circle-play video-play"></i>
+                            </div>
+
+                        </div>
+                        <div class="hotel-rating">
+                            
+                            <div class="hotel-star">
+                                <i class="fa-solid fa-star star"></i>
+                                <p class="star-point">4.6</p>
+                            </div>
+
+                            <p class="hotel-review">(63 reviews)</p>
+                        </div>
+                        <div class="more-detail-button">
+                            <p>more details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <div class="subscribe">
+            <div class="subscribe-box">
+                <div class="form-header">
+                    <p class="first-text"> to our newsletter</p>
+                    <p class="second-text">Get weekly updates</p>
+                </div>
+                <form class="subscribe-form">
+                    <p class="form-text">Fill in your details to join the party!</p>
+                    <div class="form-fields">
+                        <div class="name-field">
+                            <input type="text" placeholder="Your name">
+                        </div>
+                        <div class="mail-field">
+                            <input type="text" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <p>submit</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
