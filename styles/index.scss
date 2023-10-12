@@ -29,6 +29,10 @@ ul {
     gap: 10px;
     align-self: stretch;
     flex: 1 0 0;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
 
     .logo {
 
@@ -85,6 +89,7 @@ ul {
         align-items: center;
         text-align: center;
         justify-content: space-between;
+        position: relative !important;
 
         .logo {
             width: 87px;
@@ -110,6 +115,7 @@ ul {
     height: 100%;
     align-self: stretch;
     position: relative;
+    padding-top: 77px;
 
     .side-menu {
         display: none;
@@ -275,6 +281,7 @@ ul {
 
 @media(max-width:768px) {
     .search {
+        padding-top: 0px;
         .side-menu {
             display: none;
             position: absolute;
@@ -2425,4 +2432,94 @@ ul {
             }
         }
     }
+
+    .footer-end {
+        display: flex;
+        flex-direction: column;
+        padding: 33px 84px;
+        align-items: center;
+        justify-content: center;
+        gap: 44px;
+        align-self: stretch;
+        background: linear-gradient(92deg, #0B5BA8 30.91%, #299BD8 100.98%);
+
+        .bio {
+            display: flex;
+            flex-direction: column;
+            align-items: center !important;
+            text-align: center;
+            gap: 14px;
+
+            img {
+                text-align: center;
+                width: 174px;
+                height: 33px;
+            }
+
+            .bio-text {
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+            }
+
+            .social-icon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                img {
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        .links {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-direction: row;
+            width: 100%;
+            
+            .company, .support, .more{
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                flex-basis: 33%;
+                height: 100%;
+
+                .link-title {
+                    color: #FFF;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 27px;
+                    margin-bottom: 20px;
+                }
+    
+                .link {
+                    color: #FFF;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-top: 5px;
+                }
+            }
+
+            
+        }
+    }
 }
+
+// ---------------------- Homepage End

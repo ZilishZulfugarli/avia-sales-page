@@ -24,6 +24,10 @@ ul {
   gap: 10px;
   align-self: stretch;
   flex: 1 0 0;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  width: 100%;
 }
 .header .logo {
   width: 174px;
@@ -66,6 +70,7 @@ ul {
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    position: relative !important;
   }
   .header .logo {
     width: 87px;
@@ -84,6 +89,7 @@ ul {
   height: 100%;
   align-self: stretch;
   position: relative;
+  padding-top: 77px;
 }
 .search .side-menu {
   display: none;
@@ -212,6 +218,9 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .search {
+    padding-top: 0px;
+  }
   .search .side-menu {
     display: none;
     position: absolute;
@@ -2079,5 +2088,81 @@ ul {
     line-height: 26px;
     letter-spacing: 0.46px;
     text-transform: uppercase;
+  }
+  .footer-end {
+    display: flex;
+    flex-direction: column;
+    padding: 33px 84px;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+    align-self: stretch;
+    background: linear-gradient(92deg, #0B5BA8 30.91%, #299BD8 100.98%);
+  }
+  .footer-end .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    gap: 14px;
+  }
+  .footer-end .bio img {
+    text-align: center;
+    width: 174px;
+    height: 33px;
+  }
+  .footer-end .bio .bio-text {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+  }
+  .footer-end .bio .social-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .footer-end .bio .social-icon img {
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  .footer-end .links {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-direction: row;
+    width: 100%;
+  }
+  .footer-end .links .company, .footer-end .links .support, .footer-end .links .more {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-basis: 33%;
+    height: 100%;
+  }
+  .footer-end .links .company .link-title, .footer-end .links .support .link-title, .footer-end .links .more .link-title {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  .footer-end .links .company .link, .footer-end .links .support .link, .footer-end .links .more .link {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
   }
 }/*# sourceMappingURL=index.css.map */
