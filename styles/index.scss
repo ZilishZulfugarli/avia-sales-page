@@ -697,6 +697,24 @@ ul {
                     padding: 8px 12px;
                     align-items: flex-start;
 
+
+
+
+                }
+
+                .destination-right {
+                    // position: relative;
+                }
+
+                #paris {
+                    background: url(../images/ParisImage.png);
+                    background-size: cover;
+                    background-position: center;
+                    height: 182px;
+                    align-self: stretch;
+                    border-radius: 10px;
+                    transition: 0.5s ease-in-out;
+
                     .destination-name {
                         color: #FFF;
                         font-family: Roboto;
@@ -733,20 +751,6 @@ ul {
                     }
                 }
 
-                .destination-right {
-                    // position: relative;
-                }
-
-                #paris {
-                    background: url(../images/ParisImage.png);
-                    background-size: cover;
-                    background-position: center;
-                    height: 182px;
-                    align-self: stretch;
-                    border-radius: 10px;
-                    transition: 0.5s ease-in-out;
-                }
-
 
 
 
@@ -756,6 +760,41 @@ ul {
                     height: 182px;
                     align-self: stretch;
                     border-radius: 10px;
+
+                    .destination-name {
+                        color: #FFF;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 0.4px;
+                        flex: 1 0 0;
+                    }
+
+                    .from {
+                        color: #FFF;
+                        text-align: right;
+                        right: 0;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.64px;
+                        text-transform: uppercase;
+                        width: 52.532px;
+                    }
+
+                    .destination-price {
+                        color: var(--studio-darkmode-allwhite-ffffff, #FFF);
+                        text-align: right;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 38px;
+                        padding-right: 12px;
+                    }
                 }
 
                 #norway {
@@ -764,6 +803,41 @@ ul {
                     height: 182px;
                     align-self: stretch;
                     border-radius: 10px;
+
+                    .destination-name {
+                        color: #FFF;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 0.4px;
+                        flex: 1 0 0;
+                    }
+
+                    .from {
+                        color: #FFF;
+                        text-align: right;
+                        right: 0;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.64px;
+                        text-transform: uppercase;
+                        width: 52.532px;
+                    }
+
+                    .destination-price {
+                        color: var(--studio-darkmode-allwhite-ffffff, #FFF);
+                        text-align: right;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 38px;
+                        padding-right: 12px;
+                    }
                 }
 
                 #tuscany {
@@ -772,6 +846,41 @@ ul {
                     height: 182px;
                     align-self: stretch;
                     border-radius: 10px;
+
+                    .destination-name {
+                        color: #FFF;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 0.4px;
+                        flex: 1 0 0;
+                    }
+
+                    .from {
+                        color: #FFF;
+                        text-align: right;
+                        right: 0;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.64px;
+                        text-transform: uppercase;
+                        width: 52.532px;
+                    }
+
+                    .destination-price {
+                        color: var(--studio-darkmode-allwhite-ffffff, #FFF);
+                        text-align: right;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 38px;
+                        padding-right: 12px;
+                    }
                 }
             }
 
@@ -1317,7 +1426,8 @@ ul {
             .card-container {
                 display: flex;
                 align-self: stretch;
-                justify-content: space-between;
+                justify-content: center;
+                align-items: center;
                 flex-wrap: wrap;
                 gap: 10px;
                 width: 100%;
@@ -1340,15 +1450,7 @@ ul {
                         padding: 8px 12px;
                         align-items: center;
                         justify-content: center;
-                        flex-direction: column;
-
-
-
-
-                    }
-
-                    .destination-right {
-                        // position: relative;
+                        text-align: center;
                     }
 
                     #paris {
@@ -1359,17 +1461,34 @@ ul {
                         align-self: stretch;
                         border-radius: 10px;
                         transition: 0.5s ease-in-out;
-                        align-self: stretch;
                         display: flex;
                         justify-content: center;
+                        align-items: center;
 
-                        div {
+                        .destination-name {
+                            display: block;
+                            color: #FFF;
+                            font-family: Roboto;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            letter-spacing: 0.4px;
+                            flex: 1 0 0;
+                            align-self: stretch;
+                            text-align: center;
+                            align-items: center;
+                        }
+
+                        .show {
                             display: none;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
+                            text-align: center;
 
                             .from {
+                                text-align: center;
                                 display: flex;
                                 justify-content: center;
                                 color: #FFF;
@@ -1382,11 +1501,9 @@ ul {
                                 letter-spacing: 0.64px;
                                 text-transform: uppercase;
                                 width: 52.532px;
-                                align-self: stretch;
                             }
 
                             .destination-price {
-                                color: var(--studio-darkmode-allwhite-ffffff, #FFF);
                                 display: flex;
                                 justify-content: center;
                                 text-align: center;
@@ -1394,35 +1511,15 @@ ul {
                                 font-style: normal;
                                 font-weight: 400;
                                 line-height: 38px;
-                                padding-right: 12px;
+                                padding-right: 0;
                                 align-self: stretch;
                                 width: 200px;
                                 align-items: center;
                             }
                         }
 
-                        .destination-name {
-                            color: #FFF;
-                            font-family: Roboto;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 700;
-                            line-height: normal;
-                            letter-spacing: 0.4px;
-                            flex: 1 0 0;
-                            align-self: stretch;
-                            text-align: center;
-                            align-items: center;
-                        }
+
                     }
-
-                    #paris:hover {
-                        div {
-                            display: flex;
-                        }
-                    }
-
-
 
                     #greece {
                         background: url(../images/GreeceImage.png);
@@ -1430,6 +1527,44 @@ ul {
                         height: 182px;
                         align-self: stretch;
                         border-radius: 10px;
+
+                        .show {
+                            display: none;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+
+                            .from {
+                                text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Roboto;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: 0.64px;
+                                text-transform: uppercase;
+                                width: 52.532px;
+                            }
+
+                            .destination-price {
+                                display: flex;
+                                justify-content: center;
+                                text-align: center;
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 38px;
+                                padding-right: 0;
+                                align-self: stretch;
+                                width: 200px;
+                                align-items: center;
+                            }
+                        }
                     }
 
                     #norway {
@@ -1438,6 +1573,44 @@ ul {
                         height: 182px;
                         align-self: stretch;
                         border-radius: 10px;
+
+                        .show {
+                            display: none;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+
+                            .from {
+                                text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Roboto;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: 0.64px;
+                                text-transform: uppercase;
+                                width: 52.532px;
+                            }
+
+                            .destination-price {
+                                display: flex;
+                                justify-content: center;
+                                text-align: center;
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 38px;
+                                padding-right: 0;
+                                align-self: stretch;
+                                width: 200px;
+                                align-items: center;
+                            }
+                        }
                     }
 
                     #tuscany {
@@ -1447,6 +1620,44 @@ ul {
                         align-self: stretch;
                         border-radius: 10px;
                         align-self: stretch;
+
+                        .show {
+                            display: none;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+
+                            .from {
+                                text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Roboto;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: 0.64px;
+                                text-transform: uppercase;
+                                width: 52.532px;
+                            }
+
+                            .destination-price {
+                                display: flex;
+                                justify-content: center;
+                                text-align: center;
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 38px;
+                                padding-right: 0;
+                                align-self: stretch;
+                                width: 200px;
+                                align-items: center;
+                            }
+                        }
                     }
                 }
 
@@ -1486,7 +1697,8 @@ ul {
             .holiday-card-container {
                 display: flex;
                 flex-wrap: wrap;
-                align-items: flex-start;
+                flex-direction: column;
+                align-items: center;
                 align-self: stretch;
                 gap: 10px;
                 width: 100%;
@@ -1633,7 +1845,7 @@ ul {
                     flex-wrap: wrap;
                     padding: 0px 8px;
                     justify-content: center;
-                    align-items: flex-start;
+                    align-items: center;
                     gap: 10px;
                     align-self: stretch;
                     flex-basis: 45%;
@@ -1651,6 +1863,7 @@ ul {
                         background: #FFF;
 
                         .hotel-details {
+                            text-align: center;
                             display: flex;
                             flex-direction: row;
                             align-items: flex-start;
@@ -1725,6 +1938,8 @@ ul {
                             align-self: stretch;
                             display: flex;
                             flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
 
                             .hotel-review {
                                 color: #1262AF;
@@ -1953,6 +2168,259 @@ ul {
                         text-transform: uppercase;
                     }
 
+                }
+            }
+        }
+    }
+
+    .footer-end {
+        display: flex;
+        padding: 33px 84px;
+        align-items: flex-start;
+        gap: 44px;
+        align-self: stretch;
+        background: linear-gradient(92deg, #0B5BA8 30.91%, #299BD8 100.98%);
+
+        .bio {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+            flex: 1 0 0;
+
+            img {
+                width: 174px;
+                height: 33px;
+            }
+
+            .bio-text {
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+                /* 150% */
+            }
+
+            .social-icon {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 5px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+
+
+        .bio::after {
+            content: "";
+            background: red;
+            width: 1px;
+            height: 132px;
+            position: absolute;
+            display: block;
+            left: 50%;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex: 1 0 0;
+            
+            .company, .support, .more{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-basis: 33%;
+                height: 100%;
+
+                .link-title {
+                    color: #FFF;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 27px;
+                    margin-bottom: 20px;
+                }
+    
+                .link {
+                    color: #FFF;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-top: 5px;
+                }
+            }
+
+            
+        }
+    }
+
+
+}
+
+@media (max-width:768px) {
+    .footer {
+        padding-top: 69px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+
+        .subscribe {
+            width: 100%;
+            height: 530px;
+            flex-shrink: 0;
+            background: url(../images/subscription.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .subscribe-box {
+                display: flex;
+                width: 549px;
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+                justify-self: center;
+                gap: 30px;
+
+                .form-header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 7px;
+                    align-self: stretch;
+
+                    .first-text {
+                        color: #1262AE;
+                        text-align: center;
+                        font-family: Roboto;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 0.72px;
+                        text-transform: uppercase;
+                        align-self: stretch;
+                    }
+
+                    .second-text {
+                        color: #434343;
+                        text-align: center;
+                        font-family: Roboto;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+
+                .subscribe-form {
+                    display: flex;
+                    padding: 28px 30px;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 17px;
+                    align-self: stretch;
+                    border-radius: 12px;
+                    border: 1px solid #EAEAEA;
+                    background: #FFF;
+                    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.03);
+
+                    .form-text {
+                        color: #576074;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 34px;
+                    }
+
+                    .form-fields {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                        align-self: stretch;
+
+                        .name-field {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 3px;
+                            align-self: stretch;
+                            border: 1px solid rgba(0, 0, 0, 0.23);
+                            height: 46px;
+                            border-radius: 4px;
+                            padding: 14px 10px;
+
+                            input {
+                                display: flex;
+                                justify-content: center;
+                                outline: 0;
+                                border: 0;
+                            }
+                        }
+
+                        .mail-field {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 3px;
+                            align-self: stretch;
+                            border: 1px solid rgba(0, 0, 0, 0.23);
+                            height: 46px;
+                            border-radius: 4px;
+                            padding: 14px 10px;
+
+                            input {
+                                display: flex;
+                                justify-content: center;
+                                outline: 0;
+                                border: 0;
+                            }
+                        }
+                    }
+
+                    .submit-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        height: 46px;
+                        width: 138px;
+                        border-radius: 4px;
+                        background-color: #F99A0E;
+
+                        p {
+                            color: var(--primary-contrast, #FFF);
+                            font-feature-settings: 'clig' off, 'liga' off;
+                            font-family: Roboto;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 26px;
+                            letter-spacing: 0.46px;
+                            text-transform: uppercase;
+                        }
+
+                    }
                 }
             }
         }
