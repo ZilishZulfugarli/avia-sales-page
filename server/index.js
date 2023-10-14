@@ -1,10 +1,21 @@
-import express, { json } from "express";
+import express from "express";
+import cors from "cors";
 import {DHotelPopular} from "./data/hotel.js"
+import {DCitiesPlan, DCitiesPopular} from "./data/cities.js"
 
 let app = express();
+app.use(cors(["http://127.0.0.1:5500","http://127.0.0.1:5501"]))
 
 app.get("/hotels", (req,res)=>{
     res.json(DHotelPopular);
+})
+
+app.get("/popularcities", (req,res)=>{
+    res.json(DCitiesPopular);
+})
+
+app.get("/plancities", (req,res)=>{
+    res.json(DCitiesPlan);
 })
 
 const port = 4000;
