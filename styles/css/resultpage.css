@@ -83,4 +83,173 @@ ul {
     display: block;
     cursor: pointer;
   }
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  padding-top: 77px;
+}
+.search-container {
+  height: 362px;
+  align-self: stretch;
+  background: url(../images/Background.png), url(../images/bannergradient.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.search-container .search-col {
+  display: flex;
+  width: 100%;
+  padding: 0px 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.search-container .search-col .search-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  align-self: stretch;
+}
+.search-container .search-col .search-title p {
+  color: var(--studio-darkmode-allwhite-ffffff, #FFF);
+  font-family: Baloo Bhai;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 67px;
+}
+.search-container .search-col .search-form {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  align-self: stretch;
+}
+.search-container .search-col .search-form .upper-side {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  align-self: stretch;
+}
+.search-container .search-col .search-form .upper-side .form-title {
+  display: flex;
+  flex-direction: row;
+}
+.search-container .search-col .search-form .upper-side .form-title p {
+  color: black;
+}
+.search-container .search-col .search-form .upper-side .search-label {
+  display: flex;
+  gap: 18px;
+}
+.search-container .search-col .search-form .form-input {
+  width: 100%;
+}
+.search-container .search-col .search-form .form-input .inputs {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex: 1 0 0;
+  width: 100%;
+}
+.search-container .search-col .search-form .form-input .inputs legend {
+  font-size: 12px;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+.search-container .search-col .search-form .form-input .inputs .col4 {
+  flex-basis: 28%;
+  height: 56px;
+}
+.search-container .search-col .search-form .form-input .inputs fieldset {
+  display: flex;
+  padding: 0 15px 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.search-container .search-col .search-form .form-input .inputs fieldset input {
+  border: 1px solid;
+  height: 24px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+.search-container .search-col .search-form .form-input .inputs .search-button {
+  display: flex;
+  flex-basis: 16%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #F99A0E;
+  cursor: pointer;
+  height: 56px;
+}
+.search-container .search-col .search-form .form-input .inputs .search-button-text p {
+  font-size: 15px;
+}
+
+.search-result {
+  display: flex;
+  padding: 50px 80px;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.search-result-filter {
+  display: flex;
+  width: 253px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 39px;
+}
+.search-result-filter .summary {
+  width: 228px;
+  height: 47px;
+}
+.search-result-filter .summary .summary-text {
+  color: #57575D;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.257px;
+  position: relative;
+}
+.search-result-filter .summary .summary-text::after {
+  content: "wfefe";
+  width: 228px;
+  height: 1px;
+  background: red;
+  position: absolute;
+  display: block;
+  top: 20px;
+}
+.search-result .result {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
 }/*# sourceMappingURL=resultpage.css.map */

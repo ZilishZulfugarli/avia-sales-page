@@ -10,7 +10,7 @@
     <title>FickleFlight</title>
 </head>
 <body>
-    <section class="header">
+    <section class="header2">
         <div class="logo">
             <img src="images/Symbols.png" alt="logo.img">
         </div>
@@ -34,9 +34,221 @@
 
     </section>
 
-    <section class="search">
-        <div class="search-container">
-            
+    <section class="search2">
+        <div class="search2-container">
+            <div class="search-col">
+                <div class="search-title">
+                    <p>Where are you off too?</p>
+                </div>
+                <div class="search-form">
+                    <div class="upper-side">
+
+                        <p class="form-title">Search Flight</p>
+
+
+                        <div class="search-label">
+                            <div class="return">
+                                <input type="radio" id="return" name="fav_language" value="return">
+                                <label for="html">Return</label>
+                            </div>
+
+                            <div class="one-way">
+                                <input type="radio" id="one-way" name="fav_language" value="one-way">
+                                <label for="html">One Way</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <div class="inputs">
+                            <div class="col4">
+                                <fieldset>
+                                    <legend style="right: 0;">Departure
+                                    </legend>
+                                    <input type="text" placeholder="Singapore (SIN)">
+                                </fieldset>
+                            </div>
+                            <div class="col4">
+                                <fieldset>
+
+                                    <legend>Arrival</legend>
+                                    <input type="text" placeholder="Singapore (SIN)">
+                                </fieldset>
+                            </div>
+                            <div class="col4 date">
+                                <fieldset>
+                                    <legend>Date</legend>
+                                    <input type="date" placeholder="Singapore (SIN)">
+                                </fieldset>
+                                <!-- <fieldset>
+                                    <legend>Date</legend>
+                                    <input type="date" placeholder="Singapore (SIN)">
+                                </fieldset> -->
+                            </div>
+                            <div class="search-button">
+                                <div class="search-text">
+                                    <p>search flights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-result">
+        <div class="search-filter">
+            <div class="summary">
+                <p class="summary-text">10 out of 177 Results</p>
+            </div>
+            <div class="stops">
+                <p class="stops-text">Stops</p>
+                <div class="component-1">
+                    <input type="checkbox" id="1stop">
+                    <label for="1stop">1 stop</label>
+                </div>
+                <br>
+                <div class="component-1">
+                    <input type="checkbox" id="2stop">
+                    <label for="2stop">2 stop</label>
+                </div>
+            </div>
+            <div class="booking">
+                <p class="booking-text">Booking Options</p>
+                <div class="component-1">
+                    <input type="checkbox" id="book">
+                    <label for="book">Book on Fickleflight</label>
+                </div>
+                <br>
+                <div class="component-1">
+                    <input type="checkbox" id="website">
+                    <label for="website">Official Airline Websites</label>
+                </div>
+            </div>
+            <div class="experience">
+                <p class="experience-text">Flight Experience</p>
+                <div class="component-1">
+                    <input type="checkbox" id="flightex">
+                    <label for="flightex">No overnight flights</label>
+                </div>
+                <br>
+                <div class="component-1">
+                    <input type="checkbox" id="nostop">
+                    <label for="nostop">No long stop-overs</label>
+                </div>
+            </div>
+            <div class="airlanes">
+                <p class="airlanes-text">Airlines</p>
+                <div class="component-1">
+                    <input type="checkbox" id="singapure">
+                    <label for="singapure">Singapore Airlines</label>
+                </div>
+                <br>
+                <div class="component-1">
+                    <input type="checkbox" id="qatar">
+                    <label for="qatar">Qatar Airways</label>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="flights">
+                <p>10 out of 177 Result</p>
+                <div class="flight-card">
+                    <div class="airlane-side">
+                        <img src="images/turkishairlanes.png" alt="">
+                        <p>Turkish Airlines</p>
+                    </div>
+                    <div class="flight-side">
+                        <div class="departure-detail">
+                            <p class="time-text">11:35 PM</p>
+                            <p class="from-country">SIN</p>
+                        </div>
+                        <div class="flight-duration">
+                            <i class="fa-solid fa-plane"></i>
+                            <p>33H 10M, 1-stop</p>
+                        </div>
+                        <div class="arrival-detail">
+                            <p class="endtime-text">11:35 PM</p>
+                            <p class="to-country">SIN</p>
+                        </div>
+                    </div>
+                    <div class="price-side">
+                        <p>$723</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsored-add">
+                <div class="sponsor-title">
+                    <p>ADDS</p>
+                </div>
+                <div class="add">
+                    <div class="add-box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="subscribe">
+            <div class="subscribe-box">
+                <div class="form-header">
+                    <p class="first-text"> to our newsletter</p>
+                    <p class="second-text">Get weekly updates</p>
+                </div>
+                <form class="subscribe-form">
+                    <p class="form-text">Fill in your details to join the party!</p>
+                    <div class="form-fields">
+                        <div class="name-field">
+                            <input type="text" placeholder="Your name">
+                        </div>
+                        <div class="mail-field">
+                            <input type="text" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <p>submit</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div class="bio">
+                <img src="images/Symbols.png" alt="">
+                <p class="bio-text">Fickle Flight is your one-stop travel portal.
+                    We offer hassle free flight and hotel bookings.
+                    We also have all your flight needs in you online shop.
+                </p>
+                <div class="social-icon">
+                    <img src="images/entypo-social_facebook-with-circle.svg" alt="" class="social-img">
+                    <img src="images/entypo-social_instagram-with-circle.svg" alt="" class="social-img">
+                    <img src="images/entypo-social_twitter-with-circle.svg" alt="" class="social-img">
+                </div>
+            </div>
+            <div class="links">
+                <div class="company">
+                    <p class="link-title">Company</p>
+                    <a href="#" class="link">About Us</a>
+                    <a href="#" class="link">News</a>
+                    <a href="#" class="link">Careers</a>
+                    <a href="#" class="link">How we work</a>
+                </div>
+                <div class="support">
+                    <p class="link-title">Support</p>
+                    <a href="#" class="link">Account</a>
+                    <a href="#" class="link">Support Center</a>
+                    <a href="#" class="link">FAQ</a>
+                    <a href="#" class="link">Accessibility</a>
+                </div>
+                <div class="more">
+                    <p class="link-title">More</p>
+                    <a href="#" class="link">Covid Advisory</a>
+                    <a href="#" class="link">Airline Fees</a>
+                    <a href="#" class="link">Tips</a>
+                    <a href="#" class="link">Quarantine Rules</a>
+                </div>
+            </div>
         </div>
     </section>
 </body>
