@@ -1,12 +1,12 @@
 let cardContainer = document.querySelector(".card-container");
 let holidayContainer = document.querySelector(".holiday-card-container");
 let popHotelContainer = document.querySelector(".hotel-cards");
-let hotelContainer = document.querySelector(".hotel-card"); 
+let hotelContainer = document.querySelector(".hotel-card");
 let hotelDetail = document.querySelector(".container");
 let from = document.querySelector(".from");
 let to = document.querySelector(".to");
 let date = document.querySelector(".date");
-
+let flight = document.querySelector(".flights")
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,14 +17,147 @@ document.addEventListener("DOMContentLoaded", () => {
     listHotelDetail();
     listFlights();
     listAirports();
+    timeEditor();
 })
 
-async function listFlights(){
-     fetch(`http://localhost:4000/flights`).then(x=>x.json()).then(data=>console.log(data))
+async function listFlights() {
+    let res = await fetch(`http://localhost:4000/flights`)
+    let data = await res.json();
+
+
+    if (!res.ok) {
+        throw new Error("Sheher tapilmadi!")
+    }
+
+    if (data) {
+        flight.innerHTML = "";
+
+        flight.innerHTML += `
+        <p> 10 out of ${data.OTA_AirDetailsRS.FLSResponseFields
+            [0].$.FLSResultCount
+            } Result</p>`
+        for (let index = 0; index <= data.OTA_AirDetailsRS.FLSResponseFields
+        [0].$.FLSResultCount - 1; index++) {
+
+                const inputDateString1 = data.OTA_AirDetailsRS.FlightDetails[index].$.FLSArrivalDateTime;
+
+            const date1 = new Date(inputDateString1);
+
+            function formatTimeAsShortPM(date) {
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                const period = hours >= 12 ? 'pm' : 'am';
+
+                hours = hours % 12 || 12;
+
+                minutes = minutes.toString().padStart(2, '0');
+
+                return `${hours}:${minutes} ${period}`;
+            }
+
+
+            const arrivalTime = formatTimeAsShortPM(date1);
+            
+            //aaaasasasadadasdasdasdad
+
+                const inputDateString = data.OTA_AirDetailsRS.FlightDetails[index].$.FLSDepartureDateTime;
+
+            const date = new Date(inputDateString);
+
+            function formatTimeAsShortPM(date) {
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                const period = hours >= 12 ? 'pm' : 'am';
+
+                hours = hours % 12 || 12;
+
+                minutes = minutes.toString().padStart(2, '0');
+
+                return `${hours}:${minutes} ${period}`;
+            }
+
+            const departureTime = formatTimeAsShortPM(date);
+            
+            
+            // Input duration string
+const durationString = data.OTA_AirDetailsRS.FlightDetails[index]
+.$.TotalTripTime;
+
+// Function to convert ISO 8601 duration to short normal hours and minutes format
+function convertDurationToShortHoursAndMinutes(durationString) {
+  const duration = /PT(\d+)H(\d+)M/.exec(durationString);
+
+  if (duration) {
+    const hours = parseInt(duration[1]);
+    const minutes = parseInt(duration[2]);
+
+    let formattedTime = '';
+
+    if (hours > 0) {
+      formattedTime += hours + 'h';
+    }
+    
+    if (minutes > 0) {
+      formattedTime += ' ' + minutes + 'm';
+    }
+
+    return formattedTime.trim();
+  } else {
+    return "Invalid duration format";
+  }
 }
 
-async function listAirports(){
-     fetch(`http://localhost:4000/airports`).then(x=>x.json()).then(data=>console.log(data))
+// Convert the duration to short hours and minutes format
+const formattedArrivalTime = convertDurationToShortHoursAndMinutes(durationString);
+
+console.log(formattedArrivalTime); // Output: "6h 10m" for the given input
+
+            flight.innerHTML += `        
+                
+                <div class="flight-card">
+                    <div class="airlane-side">
+                        <img src="images/turkishairlanes.png" alt="">
+                        <p>${data.OTA_AirDetailsRS.FlightDetails[index]
+                            .FlightLegDetails[0].MarketingAirline[0].$.CompanyShortName
+                        }</p>
+                    </div>
+                    <div class="flight-side">
+                        <div class="departure-detail">
+                            <p class="time-text">${arrivalTime}</p>
+                            <p class="from-country">${data.OTA_AirDetailsRS.FlightDetails[index]
+                    .$.FLSDepartureCode
+
+                }</p>
+                        </div>
+                        <div class="flight-duration">
+                            <i class="fa-solid fa-plane"></i>
+                            <p>${formattedArrivalTime}, ${data.OTA_AirDetailsRS.FlightDetails[index]
+                                .$.FLSFlightLegs
+                            }-stop</p>
+                        </div>
+                        <div class="arrival-detail">
+                            <p class="endtime-text">${departureTime}</p>
+                            <p class="to-country">${data.OTA_AirDetailsRS.FLSResponseFields[0].$.FLSDestinationCode
+                            }</p>
+                        </div>
+                    </div>
+                    <div class="price-side">
+                        <p>$723</p>
+                    </div>
+                </div>
+        
+        `
+                ;
+
+            // }
+
+
+        }
+    }
+}
+
+async function listAirports() {
+    fetch(`http://localhost:4000/airports`).then(x => x.json()).then(data => console.log(data))
 }
 
 async function ListCities() {
@@ -187,19 +320,19 @@ async function listHotels() {
 
 async function listHotelDetail() {
 
-    let params=new URLSearchParams(window.location.search);
-    let hotelId=params.get(`id`);
+    let params = new URLSearchParams(window.location.search);
+    let hotelId = params.get(`id`);
 
     let res = await fetch(`http://localhost:4000/hotel/${hotelId}`);
     let hotelData = await res.json();
-    
+
     if (!res.ok) {
         throw new Error("Sheher tapilmadi!")
     }
 
-    if(hotelData){
+    if (hotelData) {
         hotelDetail.innerHTML = "";
-            hotelDetail.innerHTML += `
+        hotelDetail.innerHTML += `
             <div class="header">
             <p>${hotelData.hotelName}</p>
             </div>
@@ -227,6 +360,6 @@ async function listHotelDetail() {
         </div>
         
         `
-        
+
     }
 }

@@ -30,36 +30,36 @@ app.get("/hotel/:id", (req, res) => {
     res.json(DHotel);
 })
 
-app.get("/airports", async (req,res)=>{
+// app.get("/airports", async (req,res)=>{
 
-const url = 'https://timetable-lookup.p.rapidapi.com/airports/GYD/';
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': '1e699da618msh4c5a0ad14f99a67p12c794jsn6f2e1d2bb38d',
-    'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
-  }
-};
+// const url = 'https://timetable-lookup.p.rapidapi.com/airports/GYD/';
+// const options = {
+//   method: 'GET',
+//   headers: {
+//     'X-RapidAPI-Key': '15d87485edmshf5aba973f82cf54p136ebajsnbb5f3a8b7c02',
+//     'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
+//   }
+// };
 
-try {
-	const response = await fetch(url, options);
-        const xmlData = await response.text();
+// try {
+// 	const response = await fetch(url, options);
+//         const xmlData = await response.text();
 
 
 
-        xml2js.parseString(xmlData ,(err,result)=>{
-            if(err){
-                console.log("XML data error:", err)
-            }
-            else{
-                const jsonData = JSON.stringify(result, null, 2)
-                res.send(jsonData).status(200);
-            }
-        })
-} catch (error) {
-	console.error(error);
-}
-})
+//         xml2js.parseString(xmlData ,(err,result)=>{
+//             if(err){
+//                 console.log("XML data error:", err)
+//             }
+//             else{
+//                 const jsonData = JSON.stringify(result, null, 2)
+//                 res.send(jsonData).status(200);
+//             }
+//         })
+// } catch (error) {
+// 	console.error(error);
+// }
+// })
 
 
 
@@ -70,7 +70,7 @@ app.get("/flights", async (req, res) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '1e699da618msh4c5a0ad14f99a67p12c794jsn6f2e1d2bb38d',
+            'X-RapidAPI-Key': '15d87485edmshf5aba973f82cf54p136ebajsnbb5f3a8b7c02',
             'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
         }
     };
