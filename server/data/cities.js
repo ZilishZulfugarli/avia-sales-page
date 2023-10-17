@@ -53,4 +53,3 @@ export let DCitiesPlan = [{
         destinationPrice: 789,
         image:"images/PalawanImage.png"
     }]
-

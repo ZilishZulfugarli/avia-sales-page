@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .header{
+        padding: 10px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1262AE;
+        p{
+            font-size: 30px;
+        }
+    }
+
+    .hotel{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 80px;
+
+        .details{
+            padding: 18px 18px;
+            border-radius: 10px;
+            display: flex;
+            flex-basis: 25%;
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .image{
+            display: flex;
+            
+            flex-basis: 50%;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        iframe{
+            border-radius: 30px;
+            width: 50%;
+        }
+    }
+}

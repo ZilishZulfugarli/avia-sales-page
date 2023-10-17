@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/71a0b6e05b.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
     <script src="main.js" defer></script>
+    <script src="flights.js"></script>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/png" href="images/Symbols.png" />
     <link rel="html" href="./resultpage.html">
@@ -78,20 +79,20 @@
                                 <fieldset>
                                     <legend style="right: 0;">Departure
                                     </legend>
-                                    <input type="text" placeholder="Singapore (SIN)">
+                                    <input type="from" name="from" placeholder="Singapore (SIN)">
                                 </fieldset>
                             </div>
                             <div class="col4">
                                 <fieldset>
 
                                     <legend>Arrival</legend>
-                                    <input type="text" placeholder="Singapore (SIN)">
+                                    <input type="to" name="to" placeholder="Singapore (SIN)">
                                 </fieldset>
                             </div>
                             <div class="col4 date">
                                 <fieldset>
                                     <legend>Date</legend>
-                                    <input type="date" placeholder="Singapore (SIN)">
+                                    <input type="date" name="date" placeholder="Singapore (SIN)">
                                 </fieldset>
                                 <!-- <fieldset>
                                     <legend>Date</legend>
@@ -198,7 +199,7 @@
                     <p>Popular Stays</p>
                 </div>
                 <div class="stays-button">
-                    <p>View all stays</p>
+                    <a href="./hotels.html"><p >View all stays</p></a>
                     <p class="button-icon">&#10141;</p>
                 </div>
             </div>
