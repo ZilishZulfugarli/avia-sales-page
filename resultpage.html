@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/resultpage.css">
     <script src="https://kit.fontawesome.com/71a0b6e05b.js" crossorigin="anonymous"></script>
-    <script src="index.js" defer></script>
     <script src="main.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="functionality.js" defer></script>
     <link rel="icon" type="image/png" href="images/Symbols.png" />
     <title>FickleFlight</title>
 </head>
@@ -66,31 +65,27 @@
                                 <fieldset>
                                     <legend style="right: 0;">Departure
                                     </legend>
-                                    <input type="text" placeholder="Singapore (SIN)">
+                                    <input type="text" class="suka" id="departureInput" placeholder="Singapore (SIN)" value="">
                                 </fieldset>
                             </div>
                             <div class="col4">
                                 <fieldset>
 
                                     <legend>Arrival</legend>
-                                    <input type="text" placeholder="Singapore (SIN)">
+                                    <input type="to" id="arrivalInput" placeholder="Singapore (SIN)" value="">
                                 </fieldset>
                             </div>
                             <div class="col4 date">
                                 <fieldset>
                                     <legend>Date</legend>
-                                    <input type="date" placeholder="Singapore (SIN)">
+                                    <input type="date" id="dateInput" placeholder="Singapore (SIN)" value="">
                                 </fieldset>
-                                <!-- <fieldset>
-                                    <legend>Date</legend>
-                                    <input type="date" placeholder="Singapore (SIN)">
-                                </fieldset> -->
                             </div>
-                            <div class="search-button">
+                            <button class="search-button" id="searchButton">
                                 <div class="search-text">
                                     <p>search flights</p>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
 
@@ -108,12 +103,12 @@
             <div class="stops">
                 <p class="stops-text">Stops</p>
                 <div class="component-1">
-                    <input type="checkbox" id="1stop">
-                    <label for="1stop">1 stop</label>
+                    <input type="checkbox" id="one-stop">
+                    <label for="one-stop">1 stop</label>
                 </div>
                 <br>
                 <div class="component-1">
-                    <input type="checkbox" id="2stop">
+                    <input type="checkbox" id="two-stop">
                     <label for="2stop">2 stop</label>
                 </div>
             </div>

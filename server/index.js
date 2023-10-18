@@ -5,6 +5,16 @@ import { DCitiesPlan, DCitiesPopular } from "./data/cities.js"
 import fetch from 'node-fetch'
 import xml2js from "xml2js"
 
+
+// var from = document.getElementById("from").value;
+// var to = document.getElementById("to").value;
+// var date = document.getElementById("date").value;
+
+var from = "GYD";
+var to = "IST";
+var date = "20231012";
+
+
 let app = express();
 app.use(cors(["http://127.0.0.1:5500", "http://127.0.0.1:5501"]))
 
@@ -36,7 +46,7 @@ app.get("/hotel/:id", (req, res) => {
 // const options = {
 //   method: 'GET',
 //   headers: {
-//     'X-RapidAPI-Key': '15d87485edmshf5aba973f82cf54p136ebajsnbb5f3a8b7c02',
+//     'X-RapidAPI-Key': '673318f3famsh9bad1d78d367b28p1f4d57jsn7d9858af26e5',
 //     'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
 //   }
 // };
@@ -65,12 +75,16 @@ app.get("/hotel/:id", (req, res) => {
 
 
 app.get("/flights", async (req, res) => {
+    // Extract input values from query parameters in the request URL
+    const originAirportCode = req.query.origin; // Example: GYD
+    const destinationAirportCode = req.query.destination; // Example: IST
+    const date = req.query.date; // Example: 20231012
 
-    const url = 'https://timetable-lookup.p.rapidapi.com/TimeTable/GYD/IST/20231217/';
+    const url = `https://timetable-lookup.p.rapidapi.com/TimeTable/${originAirportCode}/${destinationAirportCode}/${date}`;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '15d87485edmshf5aba973f82cf54p136ebajsnbb5f3a8b7c02',
+            'X-RapidAPI-Key': '673318f3famsh9bad1d78d367b28p1f4d57jsn7d9858af26e5',
             'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
         }
     };
@@ -79,21 +93,21 @@ app.get("/flights", async (req, res) => {
         const response = await fetch(url, options);
         const xmlData = await response.text();
 
-
-
         xml2js.parseString(xmlData, (err, result) => {
             if (err) {
-                console.log("XML data error:", err)
+                console.log("XML data error:", err);
+                res.status(500).send("Error processing XML data");
+            } else {
+                const jsonData = JSON.stringify(result, null, 2);
+                res.status(200).send(jsonData);
             }
-            else {
-                const jsonData = JSON.stringify(result, null, 2)
-                res.send(jsonData).status(200);
-            }
-        })
+        });
     } catch (error) {
         console.error(error);
+        res.status(500).send("Error making the API request");
     }
-})
+});
+
 
 
 const port = 4000;
