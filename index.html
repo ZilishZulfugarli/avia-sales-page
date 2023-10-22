@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/71a0b6e05b.js" crossorigin="anonymous"></script>
-    <script src="index.js" defer></script>
     <script src="main.js" defer></script>
     <script src="functionality.js" defer></script>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/png" href="images/Symbols.png" />
     <link rel="html" href="./resultpage.html">
     <title>FickleFlight</title>
+
+    <style>
+
+        /* .dark-mode{
+            background-color: black !important;
+            color: white !important;
+
+            
+        } */
+        
+        
+        
+    </style>
 </head>
 
 <body>
@@ -22,10 +34,11 @@
         <div class="navbar">
             <div class="navigation-menu">
                 <ul>
-                    <li><a href="" style="color: #1262AF;">Explore</a></li>
-                    <li><a href="">Search</a></li>
-                    <li><a href="">Hotels</a></li>
-                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <li><a href="index.html" style="color: #1262AF;">Explore</a></li>
+                    <li><a href="resultpage.html">Search</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <i class="fa-regular fa-heart heart-icon wishlist-active-btn"></i>
+                    <!-- <button onclick="darkMode()"><p>Dark</p></button> -->
                 </ul>
             </div>
         </div>
@@ -49,6 +62,8 @@
                     <li><a href="">Hotels</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="wishlist">
         </div>
         <div class="search-background">
             <div class="search-container">
@@ -79,35 +94,27 @@
                                 <fieldset>
                                     <legend style="right: 0;">Departure
                                     </legend>
-                                    <input type="from" name="from" id="from" placeholder="Singapore (SIN)">
+                                    <input type="from" name="from" id="departureInput" placeholder="Singapore (SIN)">
                                 </fieldset>
                             </div>
                             <div class="col4">
                                 <fieldset>
 
                                     <legend>Arrival</legend>
-                                    <input type="to" name="to" id="to" placeholder="Singapore (SIN)">
+                                    <input type="to" name="to" id="arrivalInput" placeholder="Singapore (SIN)">
                                 </fieldset>
                             </div>
                             <div class="col4 date">
                                 <fieldset>
                                     <legend>Date</legend>
-                                    <input type="date" name="date" id="date" placeholder="Singapore (SIN)">
+                                    <input type="date" name="date" id="dateInput" placeholder="Singapore (SIN)">
                                 </fieldset>
-                                <!-- <fieldset>
-                                    <legend>Date</legend>
-                                    <input type="date" placeholder="Singapore (SIN)">
-                                </fieldset> -->
                             </div>
-                            <div class="search-button">
-                                <div class="search-text">
+                            <button class="search-button" id="search-button">
                                     <p>search flights</p>
-                                </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -121,26 +128,9 @@
 
 
     <section class="home">
-        <div class="upcoming-flight">
+        <div class="upcoming-flight" id="recentFlight">
             <p class="upcoming-text">Recent Searches</p>
             <div class="recent-search">
-                <div class="flight-container">
-                    <div class="from-to">
-                        <p class="flight-name">SIN</p>
-                        <i class="fa-solid fa-plane plane-icon"></i>
-                        <p class="flight-name">LAX</p>
-                    </div>
-                    <p class="flight-info"><span class="depart">Depart on:</span> 7 Sep 2021</p>
-                </div>
-                <div class="flight-container">
-                    <div class="from-to">
-                        <p class="flight-name">MY</p>
-                        <i class="fa-solid fa-plane plane-icon"></i>
-                        <p class="flight-name">DUB</p>
-                    </div>
-                    <p class="flight-info"><span class="depart">Depart on:</span> 9 Sep 2021</p>
-                </div>
-
             </div>
             <div class="prepare-menu">
                 <p class="prepare-text">Prepare for your trip</p>
@@ -204,6 +194,13 @@
                 </div>
             </div>
             <div class="hotel-cards">
+                <img>
+                        <div class="hotel-details">
+                            <div class="hotel-details-row">
+                                
+                            </div>
+                            <button class="salambtn"><p>Salam</p></button>
+                        </div>
             </div>
         </div>
     </section>
@@ -271,6 +268,12 @@
         </div>
     </section>
 
+    <!-- <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script> -->
     
 </body>
 

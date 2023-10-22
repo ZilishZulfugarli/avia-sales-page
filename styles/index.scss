@@ -15,7 +15,6 @@ ul {
 }
 
 
-
 // ---------------------- Header section
 
 .header {
@@ -113,9 +112,55 @@ ul {
 .search {
     width: 100%;
     height: 100%;
-    align-self: stretch;
     position: relative;
     padding-top: 77px;
+
+    .wishlist {
+        overflow: scroll;
+        position: fixed;
+        right: 0;
+        padding: 10px 15px;
+        background-color: #1262AE;
+        height: 50%;
+        width: 25%;
+        display: none;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 40%;
+
+
+        .wishlist-items {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: red;
+            padding: 20px;
+            border-radius: 20px;
+            align-items: center;
+
+            .wishlist-description {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+                background-color: red;
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .buy-button{
+                height: 20px;
+                width: 50%;
+                border: 0;
+                outline: 0;
+                border-radius: 5px;
+            }
+        }
+    }
 
     .side-menu {
         display: none;
@@ -200,6 +245,9 @@ ul {
 
                 .form-input {
                     width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
 
                     .inputs {
                         display: flex;
@@ -253,12 +301,17 @@ ul {
                             background: #F99A0E;
                             cursor: pointer;
                             height: 56px;
+                            outline: 0;
+                            border: 0;
+                            border-radius: 5px;
 
-                            &-text {
                                 p {
+                                    padding: 5px 5px;
                                     font-size: 15px;
+                                    text-transform: uppercase;
+                                    color: white;
                                 }
-                            }
+                            
                         }
 
 
@@ -282,6 +335,7 @@ ul {
 @media(max-width:768px) {
     .search {
         padding-top: 0px;
+
         .side-menu {
             display: none;
             position: absolute;
@@ -707,7 +761,7 @@ ul {
 
 
                 #background {
-                    
+
                     background-size: cover;
                     background-position: center;
                     height: 182px;
@@ -1250,6 +1304,7 @@ ul {
             align-items: flex-start;
             gap: 12px;
             align-self: stretch;
+            
 
             .destination-titles {
                 display: flex;
@@ -1325,6 +1380,7 @@ ul {
                         background: url(../images/ParisImage.png);
                         background-size: cover;
                         background-position: center;
+                        background-repeat: no-repeat;
                         height: 182px;
                         align-self: stretch;
                         border-radius: 10px;
@@ -2103,8 +2159,10 @@ ul {
             justify-content: space-between;
             align-items: flex-start;
             flex: 1 0 0;
-            
-            .company, .support, .more{
+
+            .company,
+            .support,
+            .more {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -2121,7 +2179,7 @@ ul {
                     line-height: 27px;
                     margin-bottom: 20px;
                 }
-    
+
                 .link {
                     color: #FFF;
                     font-family: Roboto;
@@ -2133,7 +2191,7 @@ ul {
                 }
             }
 
-            
+
         }
     }
 
@@ -2348,8 +2406,10 @@ ul {
             align-items: center !important;
             flex-direction: row;
             width: 100%;
-            
-            .company, .support, .more{
+
+            .company,
+            .support,
+            .more {
                 display: flex !important;
                 flex-direction: column !important;
                 justify-content: space-between !important;
@@ -2366,7 +2426,7 @@ ul {
                     line-height: 27px;
                     margin-bottom: 20px;
                 }
-    
+
                 .link {
                     color: #FFF;
                     font-family: Roboto;
@@ -2378,7 +2438,7 @@ ul {
                 }
             }
 
-            
+
         }
     }
 }

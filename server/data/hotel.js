@@ -116,3 +116,4 @@ export let DHotel = [
     image:"images/Lake Louise Image.png",
     country:"Baku"
 }]
+

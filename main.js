@@ -4,6 +4,12 @@ let popHotelContainer = document.querySelector(".hotel-cards");
 let hotelContainer = document.querySelector(".hotel-card");
 let hotelDetail = document.querySelector(".container");
 let flight = document.querySelector(".flights");
+let wishlistContainer = document.querySelector(".search .wishlist");
+let recentFlights = document.querySelector(".recent-search");
+
+
+// Select all elements with the class "salambtn"
+
 
 
 
@@ -16,18 +22,44 @@ document.addEventListener("DOMContentLoaded", () => {
     listHotelDetail();
     listFlights();
     listAirports();
+    wishlistHotels();
+    recentFlights();
+    displayWishlist();
+    addToWishlist();
+    hotelSearch();
+    goFlights();
 })
 
+var savedSearches = JSON.parse(localStorage.getItem("savedSearches")) || [];
 
-// Get the button and input elements by their IDs
 var searchButton = document.getElementById("searchButton");
 var departureInput = document.getElementById("departureInput");
 var arrivalInput = document.getElementById("arrivalInput");
 var dateInput = document.getElementById("dateInput");
 
-// Add a click event listener to the search button
+var mainSearchButton = document.getElementById("search-button");
+
+
+// mainSearchButton.addEventListener("click", () => {
+//         var departureValue = departureInput.value;
+//         var arrivalValue = arrivalInput.value;
+//         var dateValue = dateInput.value;
+//         var selectedDate = new Date(dateValue);
+
+//         var year = selectedDate.getFullYear();
+//         var month = (selectedDate.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
+//         var day = selectedDate.getDate().toString().padStart(2, '0');
+
+//         var formattedDate = `${year}${month}${day}`;
+
+//       const url = `http://localhost:4000/flights?origin=${departureValue}&destination=${arrivalValue}&date=${formattedDate}`;
+
+         
+//       window.location.href = url;
+
+// })
 searchButton.addEventListener("click", async function listFlights() {
-    // Get the values from the input elements
+
     var departureValue = departureInput.value;
     var arrivalValue = arrivalInput.value;
     var dateValue = dateInput.value;
@@ -37,7 +69,7 @@ searchButton.addEventListener("click", async function listFlights() {
     var month = (selectedDate.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
     var day = selectedDate.getDate().toString().padStart(2, '0');
 
-    // Format the date in "yyyymmdd" format
+
     var formattedDate = `${year}${month}${day}`;
 
 
@@ -45,20 +77,14 @@ searchButton.addEventListener("click", async function listFlights() {
     let data = await res.json();
 
 
+
     if (!res.ok) {
         throw new Error("Sheher tapilmadi!")
     }
 
 
-    // var oneStopCheckbox = document.getElementById("oneStopCheckbox");
+    
 
-    // // Check if the checkbox is checked
-    // var showOneStopFlights = oneStopCheckbox.checked;
-
-    // // Filter the flights based on the number of stops
-    // var filteredFlights = data.OTA_AirDetailsRS.FlightDetails.filter(flight => {
-    //     return showOneStopFlights ? flight.$.FLSFlightLegs === '1' : true;
-    // });
 
     if (data) {
         flight.innerHTML = "";
@@ -182,26 +208,27 @@ searchButton.addEventListener("click", async function listFlights() {
 
         }
     }
+    
 
     else {
         flight.innerHTML = "";
         flight.innerHTML += `<p>Salammm</p>`
     }
+    var searchDetails = {
+        departure: departureValue,
+        arrival: arrivalValue,
+        date: dateValue,
+       
+    };
+
+
+    savedSearches.unshift(searchDetails);
+
+    localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
+
+    
+    
 });
-
-
-
-
-
-
-
-
-// oneStop.addEventListener("click", ()=>{
-//     console.log("hellooo");
-
-// })
-
-
 
 
 
@@ -273,21 +300,84 @@ async function ListRecommendCities() {
     }
 }
 
-async function listHotelsPop() {
 
+function addToWishlist(event) {
+    let hotelId = event.target.getAttribute('data-hotel-id');
+ 
+    
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+    if (!wishlist.includes(hotelId)) {
+
+        wishlist.push(hotelId);
+        
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        displayWishlist();
+
+    } else {
+        const index = wishlist.indexOf(hotelId);
+        
+        if (index !== -1) {
+            wishlist.splice(index, 1);
+            
+        }
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+        displayWishlist();
+    }
+}
+
+function displayWishlist() {
+    const wishlistContainer = document.querySelector('.wishlist');
+    wishlistContainer.innerHTML = '';
+
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+
+    wishlist.forEach(hotelId => {
+        
+        const heartIcon = document.querySelector(`i[data-hotel-id="${hotelId}"]`);
+        const hotelName = heartIcon.getAttribute('data-hotel-name');
+        const hotelPrice = heartIcon.getAttribute('data-hotel-price');
+        wishlistContainer.innerHTML +=
+         `
+        <div class="wishlist-items">
+        <div class="wishlist-description">
+            <div class="hotel-name">
+                <p>${hotelName}</p>
+            </div>
+            <div class="hotel-price">
+                <p>${hotelPrice}$</p>
+            </div>
+        </div>
+        
+        <button class="buy-button">
+            Finish Buy
+        </button>
+        <button class="delete-button" data-hotel-id="${hotelId}">
+            Delete
+        </button>
+    </div>
+        `;
+
+        
+    });
+}
+
+
+async function listHotelsPop() {
     let res = await fetch("http://localhost:4000/popularhotels");
     let data = await res.json();
 
     if (!res.ok) {
-        throw new Error("Sheher tapilmadi!")
+        throw new Error("Sheher tapilmadi!");
     }
 
     if (Array.isArray(data) && data) {
         popHotelContainer.innerHTML = "";
         data.forEach(hotel => {
             popHotelContainer.innerHTML += `
-        
-            <div class="hotel-col">
+                <div class="hotel-col">
                     <div class="hotel-card">
                         <img src="${hotel.image}" alt="">
                         <div class="hotel-details">
@@ -296,30 +386,25 @@ async function listHotelsPop() {
                                 <p class="hotel-name">${hotel.hotelName}</p>
                                 <p class="hotel-price">$${hotel.hotelPrice}/night</p>
                             </div>
-                            <i class="fa-regular fa-circle-play video-play"></i>
+                            <i data-hotel-id="${hotel.id}" data-hotel-name="${hotel.hotelName}" data-hotel-price="${hotel.hotelPrice}" class="fa-regular fa-heart my-heart" onclick="addToWishlist(event)" style="cursor: pointer;"></i>
                         </div>
                         <div class="hotel-rating">
-
                             <div class="hotel-star">
                                 <i class="fa-solid fa-star star"></i>
                                 <p class="star-point">${hotel.hotelRating.starPoint}</p>
                             </div>
-
                             <p class="hotel-review">(${hotel.hotelRating.hotelReview} reviews)</p>
                         </div>
-                        
-                            <div class="more-detail-button">
-                                <a href="./hotel-details.html?id=${hotel.id}"><p>more details</p></a>
-                            </div>
-                        
-
+                        <a href="./hotel-details.html?id=${hotel.id}" class="more-detail-button">
+                            <p>more details</p>
+                        </a>
                     </div>
                 </div>
-        
-        `
+            `;
         });
     }
 }
+
 
 async function listHotels() {
 
@@ -413,3 +498,12 @@ async function listHotelDetail() {
 
     }
 }
+
+async function hotelSearch(){
+    let res = await fetch("http://localhost:4000/hotelsearch")
+    let data = res.json();
+    console.log(res)
+}
+
+
+    
