@@ -6,6 +6,7 @@ let hotelDetail = document.querySelector(".container");
 let flight = document.querySelector(".flights");
 let wishlistContainer = document.querySelector(".search .wishlist");
 let recentFlights = document.querySelector(".recent-search");
+var hotelResults = document.querySelector(".show-hotels");
 
 
 // Select all elements with the class "salambtn"
@@ -22,12 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     listHotelDetail();
     listFlights();
     listAirports();
-    wishlistHotels();
     recentFlights();
     displayWishlist();
     addToWishlist();
     hotelSearch();
-    goFlights();
+    hotelResult();
 })
 
 var savedSearches = JSON.parse(localStorage.getItem("savedSearches")) || [];
@@ -499,10 +499,55 @@ async function listHotelDetail() {
     }
 }
 
-async function hotelSearch(){
-    let res = await fetch("http://localhost:4000/hotelsearch")
-    let data = res.json();
-    console.log(res)
+// async function hotelSearch(){
+//     let res = await fetch("http://localhost:4000/hotelsearch")
+//     let data = res.json();
+//     console.log(res)
+// }
+
+async function hotelResult() {
+    
+    let res = await fetch("http://localhost:4000/hotelspage");
+    let data = await res.json();
+
+    console.log(data)
+
+    if (!res.ok) {
+        throw new Error("Sheher tapilmadi!")
+    }
+
+    if (Array.isArray(data) && data) {
+        
+        hotelResults.innerHTML = "";
+        data.forEach(hotel => {
+            hotelResults.innerHTML += `
+            
+            <div class="hotels-card">
+                    <img src="${hotel.image}" alt="">
+                    <div class="hotel-result-details">
+                        <div class="hotel-result-details-title">
+                            <div class="hotel-result-details-title-result">
+                                <p>${hotel.hotelName}</p>
+                                <p>${hotel.hotelDescription}</p>
+                                <div class="hotel-rating">
+                                    <div class="hotel-star">
+                                        <i class="fa-solid fa-star star" style="color: #FDBF00;"></i>
+                                        <p class="star-point">${hotel.hotelRating.starPoint}</p>
+                                    </div>
+                                    <p class="hotel-review">(${hotel.hotelRating.hotelReview} reviews)</p>
+                                </div>
+                                <a href="./hotel-details.html?id=${hotel.id}" class="more-detail-button">
+                                    <p>more details</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        
+        `
+        });
+    }
 }
 
 

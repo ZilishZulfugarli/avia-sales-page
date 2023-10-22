@@ -26,6 +26,10 @@ app.get("/hotels", (req, res) => {
     res.json(DHotel);
 })
 
+app.get("/hotelspage", (req, res) => {
+    res.json(DHotel);
+})
+
 app.get("/hotel/:id", (req, res) => {
     let id = Number(req.params.id);
     res.json(DHotel.find(x => x.id === id));
