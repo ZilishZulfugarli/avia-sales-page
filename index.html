@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/71a0b6e05b.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
     <script src="functionality.js" defer></script>
+    <script src="main.js" defer></script>
+    
+    
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header-footer.css">
     <link rel="icon" type="image/png" href="images/Symbols.png" />
@@ -45,7 +47,10 @@
         </div>
 
 
-        <i class="fa-solid fa-bars hamburger-icon" style="color: #0041b3;"></i>
+        <div class="side-nav" style="display: none;">
+            <i class="fa-regular fa-heart heart-icon wishlist-active-btn" style="cursor: pointer;"></i>
+            <i class="fa-solid fa-bars hamburger-icon" style="color: #0041b3;"></i>
+        </div>
 
 
 
@@ -58,9 +63,9 @@
         <div class="side-menu" id="side-menu">
             <div class="hamburger-menu">
                 <ul>
-                    <li><a href="">Explore</a></li>
-                    <li><a href="">Search</a></li>
-                    <li><a href="">Hotels</a></li>
+                    <li><a href="index.html">Explore</a></li>
+                    <li><a href="resultpage.html">Search</a></li>
+                    <li><a href="hotelpage.html">Hotels</a></li>
                 </ul>
             </div>
         </div>
@@ -275,6 +280,8 @@
             element.classList.toggle("dark-mode");
         }
     </script> -->
+    <script src="main.js" ></script>
+
     
 </body>
 

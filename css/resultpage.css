@@ -22,6 +22,27 @@ ul {
   align-self: stretch;
   padding-top: 77px;
 }
+.search2 .side-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  background-color: white;
+  transition: all 1 ease-in-out;
+}
+.search2 .side-menu .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.search2 .side-menu .hamburger-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px;
+  justify-content: space-between;
+}
 .search2-filter {
   display: flex;
   width: 253px;
@@ -150,6 +171,7 @@ ul {
 @media (max-width: 768px) {
   .search2 {
     padding-top: 0px;
+    position: relative;
   }
   .search2 .side-menu {
     display: none;
@@ -172,81 +194,30 @@ ul {
     padding: 15px;
     justify-content: space-between;
   }
-  .search2 .search-background .search2-container {
-    display: flex;
-    width: 100%;
-    height: 640px;
-    padding: 0px 70px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 21.5px;
-    flex-shrink: 0;
+  .search2 .search2-container .search-col .search-title p {
+    font-size: 30px;
   }
-  .search2 .search-background .search2-container .search-title {
-    align-self: stretch;
-    color: var(--studio-darkmode-allwhite-ffffff, #FFF);
-    text-align: left;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Baloo Bhai;
-    font-size: 61px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 67px;
-    /* 109.836% */
-  }
-  .search2 .search-background .search2-container .search-text {
-    align-self: stretch;
-    color: #FFF;
-    text-align: left;
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    /* 133.333% */
-  }
-  .search2 .search-background .search2-container .search-form {
-    width: 100%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+  .search2 .search2-container .search-col .search-form {
     display: flex;
     flex-direction: column;
+  }
+  .search2 .search2-container .search-col .search-form .upper-side .form-title {
+    font-size: 10px !important;
+    align-self: stretch;
+  }
+  .search2 .search2-container .search-col .search-form .upper-side .search-label {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    align-self: stretch;
-  }
-  .search2 .search-background .search2-container .search-form .upper-side {
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    align-self: stretch;
-  }
-  .search2 .search-background .search2-container .search-form .upper-side .form-title {
-    display: flex;
-    flex-direction: row;
-  }
-  .search2 .search-background .search2-container .search-form .upper-side .form-title p {
-    color: black;
+    gap: 10px;
     font-size: 12px;
   }
-  .search2 .search-background .search2-container .search-form .upper-side .search-label {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    font-size: 12px;
-  }
-  .search2 .search-background .search2-container .search-form .form-input {
+  .search2 .search2-container .search-col .search-form .form-input {
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs {
+  .search2 .search2-container .search-col .search-form .form-input .inputs {
     display: flex;
     flex-wrap: wrap;
     padding: 2.5px;
@@ -256,16 +227,16 @@ ul {
     flex: 1 0 0;
     width: 100%;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs legend {
+  .search2 .search2-container .search-col .search-form .form-input .inputs legend {
     font-size: 6px;
     letter-spacing: 0.15px;
     font-weight: 400;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs .col4 {
+  .search2 .search2-container .search-col .search-form .form-input .inputs .col4 {
     flex-basis: 100%;
-    height: 56px;
+    height: 40px;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs fieldset {
+  .search2 .search2-container .search-col .search-form .form-input .inputs fieldset {
     display: flex;
     padding: 0 15px 12px;
     align-items: center;
@@ -274,14 +245,14 @@ ul {
     flex-direction: column;
     border-radius: 4px;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs fieldset input {
+  .search2 .search2-container .search-col .search-form .form-input .inputs fieldset input {
     border: 1px solid;
     height: 24px;
     width: 100%;
     outline: 0;
     border: 0;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs .search-button {
+  .search2 .search2-container .search-col .search-form .form-input .inputs .search-button {
     display: flex;
     flex-basis: 100%;
     height: 56px;
@@ -293,27 +264,124 @@ ul {
     cursor: pointer;
     height: 28px;
   }
-  .search2 .search-background .search2-container .search-form .form-input .inputs .search-button-text p {
+  .search2 .search2-container .search-col .search-form .form-input .inputs .search-button-text p {
     font-size: 8px !important;
     align-items: baseline;
   }
 }
 @media (max-width: 576px) {
-  .search2 .search-background .search-container {
+  .search2 {
+    padding-top: 0px;
+    position: relative;
+  }
+  .search2 .side-menu {
+    display: none;
+    position: relative;
+    right: 0;
+    width: 30%;
+    height: 80px;
+    background-color: white;
+    transition: 1s;
+    transition: all 1 ease-in-out;
+  }
+  .search2 .side-menu .hamburger-menu {
     display: flex;
-    width: 100%;
-    height: 640px;
-    padding: 0px 70px;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search2 .side-menu .hamburger-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  .search2 .search2-container {
+    position: relative;
+  }
+  .search2 .search2-container .search-col .search-title p {
+    font-size: 25px;
+  }
+  .search2 .search2-container .search-col .search-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .search2 .search2-container .search-col .search-form .upper-side .form-title {
+    font-size: 10px !important;
+    align-self: stretch;
+  }
+  .search2 .search2-container .search-col .search-form .upper-side .search-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 10px;
+  }
+  .search2 .search2-container .search-col .search-form .upper-side .search-label #return {
+    height: 7px;
+    width: 7px;
+  }
+  .search2 .search2-container .search-col .search-form .upper-side .search-label #one-way {
+    height: 7px;
+    width: 7px;
+  }
+  .search2 .search2-container .search-col .search-form .form-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .search2 .search2-container .search-col .search-form .form-input .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    flex: 1 0 0;
+    width: 100%;
+  }
+  .search2 .search2-container .search-col .search-form .form-input .inputs legend {
+    font-size: 6px;
+    letter-spacing: 0.15px;
+    font-weight: 400;
+  }
+  .search2 .search2-container .search-col .search-form .form-input .inputs .col4 {
+    flex-basis: 100%;
+    height: 20px;
+  }
+  .search2 .search2-container .search-col .search-form .form-input .inputs fieldset {
+    display: flex;
+    padding: 0 10px 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    flex-direction: column;
+    border-radius: 4px;
+  }
+  .search2 .search2-container .search-col .search-form .form-input .inputs fieldset input {
+    border: 1px solid;
+    height: 10px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 7px;
+  }
+  .search2 .search2-container .search-col .search-form .form-input .inputs .search-button {
+    display: flex;
+    flex-basis: 100%;
+    height: 56px;
     justify-content: center;
-    gap: 21.5px;
-    flex-shrink: 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    background: #F99A0E;
+    cursor: pointer;
+    height: 28px;
   }
-  .search2 .search-background .search-container .search-title {
-    font-size: 36px;
-  }
-  .search2 .search-background .search-container .search-text {
-    font-size: 12px;
+  .search2 .search2-container .search-col .search-form .form-input .inputs .search-button-text p {
+    font-size: 8px !important;
+    align-items: baseline;
   }
 }
 .search-result {
@@ -483,7 +551,19 @@ ul {
   flex-basis: 80%;
   width: 100%;
 }
-.search-result .result .flights {
+.search-result .result .all-flights {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.search-result .result .all-flights #show-more {
+  padding: 10px 15px;
+  justify-content: flex-start;
+  background-color: #1262AF;
+  color: white;
+  width: 150px;
+}
+.search-result .result .all-flights .flights {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -491,7 +571,7 @@ ul {
   flex: 1 0 0;
   flex-basis: 70%;
 }
-.search-result .result .flights p {
+.search-result .result .all-flights .flights p {
   color: #7E8B97;
   font-family: Roboto;
   font-size: 18px;
@@ -500,7 +580,7 @@ ul {
   line-height: normal;
   letter-spacing: 0.257px;
 }
-.search-result .result .flights .flight-card {
+.search-result .result .all-flights .flights .flight-card {
   display: flex;
   padding: 0px 6px 0px 25px;
   justify-content: center;
@@ -512,13 +592,13 @@ ul {
   border: 0.7px solid #CECECE;
   background: #FFF;
 }
-.search-result .result .flights .flight-card .airlane-side {
+.search-result .result .all-flights .flights .flight-card .airlane-side {
   display: flex;
   align-items: center;
   gap: 7px;
   flex-basis: 20%;
 }
-.search-result .result .flights .flight-card .flight-side {
+.search-result .result .all-flights .flights .flight-card .flight-side {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -526,7 +606,7 @@ ul {
   flex-basis: 55%;
   align-self: stretch;
 }
-.search-result .result .flights .flight-card .flight-side .time-text {
+.search-result .result .all-flights .flights .flight-card .flight-side .time-text {
   color: #1262AF;
   font-family: Roboto;
   font-size: 21px;
@@ -535,7 +615,7 @@ ul {
   line-height: normal;
   letter-spacing: 0.322px;
 }
-.search-result .result .flights .flight-card .flight-side .from-country {
+.search-result .result .all-flights .flights .flight-card .flight-side .from-country {
   color: #646468;
   font-family: Roboto;
   font-size: 16px;
@@ -544,7 +624,7 @@ ul {
   line-height: normal;
   letter-spacing: 0.257px;
 }
-.search-result .result .flights .flight-card .flight-side .endtime-text {
+.search-result .result .all-flights .flights .flight-card .flight-side .endtime-text {
   color: #1262AF;
   font-family: Roboto;
   font-size: 21px;
@@ -554,7 +634,7 @@ ul {
   line-height: normal;
   letter-spacing: 0.322px;
 }
-.search-result .result .flights .flight-card .flight-side .to-country {
+.search-result .result .all-flights .flights .flight-card .flight-side .to-country {
   color: #646468;
   font-family: Roboto;
   font-size: 16px;
@@ -564,14 +644,14 @@ ul {
   line-height: normal;
   letter-spacing: 0.257px;
 }
-.search-result .result .flights .flight-card .flight-side .flight-duration {
+.search-result .result .all-flights .flights .flight-card .flight-side .flight-duration {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px 0px;
 }
-.search-result .result .flights .flight-card .price-side {
+.search-result .result .all-flights .flights .flight-card .price-side {
   display: flex;
   height: 100%;
   justify-content: center;
@@ -614,7 +694,7 @@ ul {
 @media (max-width: 768px) {
   .search-result {
     display: flex;
-    padding: 50px 80px;
+    padding: 25px 40px;
     justify-content: center;
     align-items: flex-start;
     align-self: stretch;
@@ -623,158 +703,154 @@ ul {
   .search-result .search-filter {
     display: flex;
     flex-direction: column;
-    flex-basis: 20%;
   }
   .search-result .search-filter .summary {
-    width: 114px;
-    height: 47px;
+    width: 57px;
   }
   .search-result .search-filter .summary .summary-text {
     color: #57575D;
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 8px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: normal;
     letter-spacing: 0.257px;
     position: relative;
   }
   .search-result .search-filter .summary .summary-text::after {
-    content: "";
-    width: 228px;
-    height: 1px;
-    background: #EAEAEA;
-    position: absolute;
-    display: block;
-    top: 47px;
+    display: none;
   }
   .search-result .search-filter .stops {
-    width: 296.618px;
-    height: 106px;
+    width: 57px;
+    height: auto;
   }
   .search-result .search-filter .stops .stops-text {
     color: #57575D;
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.257px;
     width: 65.262px;
-    padding-bottom: 24px;
   }
   .search-result .search-filter .stops .component-1 {
     display: inline-flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 10px;
     align-items: center;
+  }
+  .search-result .search-filter .stops .component-1 input {
+    width: 10px;
+    height: 10px;
   }
   .search-result .search-filter .stops .component-1 label {
     color: #57575D;
     font-family: Roboto;
-    font-size: 17px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.257px;
   }
   .search-result .search-filter .booking {
-    width: 100%;
+    width: 57px;
   }
   .search-result .search-filter .booking .booking-text {
     color: #57575D;
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.257px;
-    padding-bottom: 24px;
   }
   .search-result .search-filter .booking .component-1 {
     display: inline-flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 10px;
     align-items: center;
+  }
+  .search-result .search-filter .booking .component-1 input {
+    width: 10px;
+    height: 10px;
   }
   .search-result .search-filter .booking .component-1 label {
     color: #57575D;
     font-family: Roboto;
-    font-size: 17px;
+    font-size: 8px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: normal;
     letter-spacing: 0.257px;
   }
   .search-result .search-filter .experience {
-    width: 100%;
+    width: 57px;
   }
   .search-result .search-filter .experience .experience-text {
     color: #57575D;
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.257px;
-    padding-bottom: 24px;
   }
   .search-result .search-filter .experience .component-1 {
     display: inline-flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 10px;
     align-items: center;
+  }
+  .search-result .search-filter .experience .component-1 input {
+    width: 10px;
+    height: 10px;
   }
   .search-result .search-filter .experience .component-1 label {
     color: #57575D;
     font-family: Roboto;
-    font-size: 17px;
+    font-size: 8px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: normal;
     letter-spacing: 0.257px;
   }
-  .search-result .search-filter .summary-text::after {
-    content: "";
-    width: 228px;
-    height: 1px;
-    background: #EAEAEA;
-    position: absolute;
-    display: block;
-    top: 47px;
-  }
   .search-result .search-filter .airlanes {
-    width: 100%;
+    width: 57px;
+    height: 23px;
   }
   .search-result .search-filter .airlanes .airlanes-text {
     color: #57575D;
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.257px;
-    padding-bottom: 24px;
   }
   .search-result .search-filter .airlanes .component-1 {
     display: inline-flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 10px;
     align-items: center;
+  }
+  .search-result .search-filter .airlanes .component-1 input {
+    width: 10px;
+    height: 10px;
   }
   .search-result .search-filter .airlanes .component-1 label {
     color: #57575D;
     font-family: Roboto;
-    font-size: 17px;
+    font-size: 8px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: normal;
     letter-spacing: 0.257px;
   }
   .search-result .result {
     display: flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: 12px;
     flex: 1 0 0;
     flex-basis: 80%;
     width: 100%;
@@ -783,14 +859,14 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 8px;
     flex: 1 0 0;
     flex-basis: 70%;
   }
   .search-result .result .flights p {
     color: #7E8B97;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -802,7 +878,7 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     align-self: stretch;
     width: 100%;
     border-radius: 6px;
@@ -814,6 +890,8 @@ ul {
     align-items: center;
     gap: 7px;
     flex-basis: 20%;
+    width: 40px;
+    height: 20px;
   }
   .search-result .result .flights .flight-card .flight-side {
     display: flex;
@@ -826,7 +904,7 @@ ul {
   .search-result .result .flights .flight-card .flight-side .time-text {
     color: #1262AF;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -835,7 +913,7 @@ ul {
   .search-result .result .flights .flight-card .flight-side .from-country {
     color: #646468;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 6px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -844,7 +922,7 @@ ul {
   .search-result .result .flights .flight-card .flight-side .endtime-text {
     color: #1262AF;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 8px;
     text-align: right;
     font-style: normal;
     font-weight: 500;
@@ -854,7 +932,7 @@ ul {
   .search-result .result .flights .flight-card .flight-side .to-country {
     color: #646468;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 6px;
     text-align: right;
     font-style: normal;
     font-weight: 400;
@@ -876,7 +954,7 @@ ul {
     height: 100%;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid red;
+    border-top: 1px solid red;
     flex-basis: 20%;
   }
   .search-result .result .flights .flight-card .price-side p {
@@ -887,7 +965,7 @@ ul {
     padding-bottom: 0px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 12px;
     border-radius: 6px;
     flex-basis: 30%;
     align-self: stretch;
@@ -902,7 +980,7 @@ ul {
     color: red;
     top: 20px;
     position: absolute;
-    display: block;
+    display: none;
   }
   .search-result .result .sponsored-add .add {
     display: flex;
@@ -910,7 +988,309 @@ ul {
   }
   .search-result .result .sponsored-add .add .add-box {
     border: 1px solid black;
-    width: 257px;
-    height: 214px;
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .search-result {
+    display: flex;
+    padding: 25px 40px !important;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+  }
+  .search-result .search-filter {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-result .search-filter .summary {
+    width: 57px;
+  }
+  .search-result .search-filter .summary .summary-text {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.257px;
+    position: relative;
+  }
+  .search-result .search-filter .summary .summary-text::after {
+    display: none;
+  }
+  .search-result .search-filter .stops {
+    width: 57px;
+    height: auto;
+  }
+  .search-result .search-filter .stops .stops-text {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.257px;
+    width: 65.262px;
+  }
+  .search-result .search-filter .stops .component-1 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  .search-result .search-filter .stops .component-1 input {
+    width: 10px;
+    height: 10px;
+  }
+  .search-result .search-filter .stops .component-1 label {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .search-filter .booking {
+    width: 57px;
+  }
+  .search-result .search-filter .booking .booking-text {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .search-filter .booking .component-1 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  .search-result .search-filter .booking .component-1 input {
+    width: 10px;
+    height: 10px;
+  }
+  .search-result .search-filter .booking .component-1 label {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .search-filter .experience {
+    width: 57px;
+  }
+  .search-result .search-filter .experience .experience-text {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .search-filter .experience .component-1 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  .search-result .search-filter .experience .component-1 input {
+    width: 10px;
+    height: 10px;
+  }
+  .search-result .search-filter .experience .component-1 label {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .search-filter .airlanes {
+    width: 57px;
+    height: 23px;
+  }
+  .search-result .search-filter .airlanes .airlanes-text {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .search-filter .airlanes .component-1 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  .search-result .search-filter .airlanes .component-1 input {
+    width: 10px;
+    height: 10px;
+  }
+  .search-result .search-filter .airlanes .component-1 label {
+    color: #57575D;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .result {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    flex: 1 0 0;
+    flex-basis: 80%;
+    width: 100%;
+  }
+  .search-result .result .flights {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px !important;
+    flex: 1 0 0;
+    flex-basis: 70%;
+  }
+  .search-result .result .flights p {
+    color: #7E8B97;
+    font-family: Roboto;
+    font-size: 4px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .result .flights .flight-card {
+    display: flex;
+    padding: 0px 3px 0px 12.5px !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px !important;
+    align-self: stretch;
+    width: 100%;
+    border-radius: 6px;
+    border: 0.7px solid #CECECE;
+    background: #FFF;
+  }
+  .search-result .result .flights .flight-card .airlane-side {
+    display: flex;
+    align-items: center;
+    gap: 5px !important;
+    flex-basis: 20%;
+    width: 20px !important;
+    height: 10px !important;
+  }
+  .search-result .result .flights .flight-card .flight-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    flex-basis: 55%;
+    align-self: stretch;
+  }
+  .search-result .result .flights .flight-card .flight-side .time-text {
+    color: #1262AF;
+    font-family: Roboto;
+    font-size: 5px !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.322px;
+  }
+  .search-result .result .flights .flight-card .flight-side .from-country {
+    color: #646468;
+    font-family: Roboto;
+    font-size: 3px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .result .flights .flight-card .flight-side .endtime-text {
+    color: #1262AF;
+    font-family: Roboto;
+    font-size: 5px !important;
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.322px;
+  }
+  .search-result .result .flights .flight-card .flight-side .to-country {
+    color: #646468;
+    font-family: Roboto;
+    font-size: 3px !important;
+    text-align: right;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.257px;
+  }
+  .search-result .result .flights .flight-card .flight-side .flight-duration {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+  }
+  .search-result .result .flights .flight-card .flight-side .flight-duration p {
+    font-size: 6px !important;
+  }
+  .search-result .result .flights .flight-card .price-side {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+    flex-basis: 20%;
+  }
+  .search-result .result .flights .flight-card .price-side p {
+    font-size: 16px !important;
+  }
+  .search-result .result .sponsored-add {
+    display: flex;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 6px;
+    flex-basis: 30%;
+    align-self: stretch;
+  }
+  .search-result .result .sponsored-add .sponsored-title {
+    position: relative;
+  }
+  .search-result .result .sponsored-add .sponsored-title::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    color: red;
+    top: 20px;
+    position: absolute;
+    display: none;
+  }
+  .search-result .result .sponsored-add .add {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-result .result .sponsored-add .add .add-box {
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
   }
 }/*# sourceMappingURL=resultpage.css.map */

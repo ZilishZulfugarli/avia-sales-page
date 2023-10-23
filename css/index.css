@@ -198,6 +198,9 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .header .side-nav {
+    display: flex !important;
+  }
   .search {
     padding-top: 0px;
   }
@@ -1286,6 +1289,553 @@ ul {
     align-self: stretch;
     width: 200px;
     align-items: center;
+  }
+  .home .pop-destinations .card-container .col:hover {
+    transform: scale(1.1);
+  }
+  .home .recommend-holidays {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+  }
+  .home .recommend-holidays .holidays-titles {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: stretch;
+  }
+  .home .recommend-holidays .holidays-titles .holidays-title {
+    color: #303030;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    flex: 1 0 0;
+  }
+  .home .recommend-holidays .holiday-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+  .home .recommend-holidays .holiday-card-container .holiday-col {
+    display: flex;
+    padding: 0px 8px;
+    flex-basis: 40%;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 1 1;
+    transition: 0.5s ease-in-out;
+  }
+  .home .recommend-holidays .holiday-card-container .holiday-col .holiday-details {
+    display: flex;
+    padding: 20px 16px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+  }
+  .home .recommend-holidays .holiday-card-container .holiday-col .holiday-details .holiday-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    flex: 1 0 0;
+  }
+  .home .recommend-holidays .holiday-card-container .holiday-col .holiday-details .holiday-name .country-name {
+    color: #424242;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+  }
+  .home .recommend-holidays .holiday-card-container .holiday-col .holiday-details .holiday-name .country-code {
+    color: #999;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    align-self: stretch;
+  }
+  .home .recommend-holidays .holiday-card-container .holiday-col .holiday-details .holiday-price {
+    color: #1262AF;
+    text-align: right;
+    font-family: Baloo Bhai;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+  }
+  .home .recommend-holidays .holiday-col:hover {
+    transform: scale(1.1);
+  }
+  .home .popular-stays {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    width: 100%;
+  }
+  .home .popular-stays .stays-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+  }
+  .home .popular-stays .stays-header .stays-title {
+    height: 24px;
+    flex: 1 0 0;
+  }
+  .home .popular-stays .stays-header .stays-title p {
+    color: #303030;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    width: 100%;
+  }
+  .home .popular-stays .stays-header .stays-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 31px;
+    background: #FFF;
+    cursor: pointer;
+  }
+  .home .popular-stays .stays-header .stays-button p {
+    color: #1262AE;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-align: center;
+  }
+  .home .popular-stays .stays-header .stays-button .button-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .home .popular-stays .hotel-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    flex: 1 0 0 0;
+    gap: 10px;
+  }
+  .home .popular-stays .hotel-cards .hotel-col {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    flex-basis: 45%;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card {
+    display: flex;
+    padding: 12px 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    flex: 1 0 0;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details-row .hotel-description {
+    color: #8E8E94;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    align-self: stretch;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details-row .hotel-name {
+    color: #303030;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.88px;
+    text-transform: capitalize;
+    align-self: stretch;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details-row .hotel-price {
+    color: #303030;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    align-self: stretch;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details .video-button video {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    padding: 0.725px;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-details .video-button video .video-play {
+    width: 23.551px;
+    height: 23.551px;
+    flex-shrink: 0;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-rating {
+    height: 19px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-rating .hotel-review {
+    color: #1262AF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    max-width: 216.267px;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-rating .hotel-star {
+    width: 44.38px;
+    height: 19px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-rating .hotel-star .star-point {
+    color: #303030;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .hotel-rating .hotel-star .star {
+    width: 16.676px;
+    height: 17.189px;
+    flex-shrink: 0;
+    color: #FDBF00;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .more-detail-button {
+    display: flex;
+    height: 46px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid #CCDCEC;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .more-detail-button p {
+    color: #1262AF;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .more-detail-button:hover {
+    background-color: #1262AF;
+  }
+  .home .popular-stays .hotel-cards .hotel-col .hotel-card .more-detail-button:hover p {
+    color: white;
+  }
+}
+@media (max-width: 576px) {
+  .home {
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 17.25px;
+  }
+  .home .upcoming-flight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    align-self: stretch;
+  }
+  .home .upcoming-flight .upcoming-text {
+    color: #303030;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+  }
+  .home .upcoming-flight .recent-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    align-self: stretch;
+  }
+  .home .upcoming-flight .recent-search .flight-container {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10.5px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+  }
+  .home .upcoming-flight .recent-search .flight-container .from-to {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  .home .upcoming-flight .recent-search .flight-container .from-to .flight-name {
+    color: #1262AE;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-transform: capitalize;
+    width: 51.273px;
+  }
+  .home .upcoming-flight .recent-search .flight-container .plane-icon {
+    position: relative;
+    color: #1262AE;
+  }
+  .home .upcoming-flight .recent-search .flight-container .depart {
+    color: #000;
+    font-family: Roboto;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+  }
+  .home .upcoming-flight .recent-search .flight-container .flight-info {
+    color: #000;
+    font-family: Roboto;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+  }
+  .home .upcoming-flight .prepare-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    align-self: stretch;
+    padding-top: 12px;
+  }
+  .home .upcoming-flight .prepare-menu .prepare-text {
+    text-align: center;
+    align-self: stretch;
+    color: #CECECE;
+    font-family: Roboto;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+  }
+  .home .upcoming-flight .prepare-menu .trip-menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .home .upcoming-flight .prepare-menu .trip-menus .trip-sections {
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+  }
+  .home .upcoming-flight .prepare-menu .trip-menus .trip-sections .trip-names {
+    text-align: center;
+    color: #8E8E94;
+    font-family: Roboto;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+  }
+  .home .pop-destinations {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px;
+    align-self: stretch;
+  }
+  .home .pop-destinations .destination-titles {
+    display: flex !important;
+    align-items: center !important;
+    align-self: stretch !important;
+  }
+  .home .pop-destinations .destination-titles .title-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 3px !important;
+    flex: 1 0 0 !important;
+  }
+  .home .pop-destinations .destination-titles .title-container .plan-text {
+    color: #1262AE;
+    font-family: Roboto;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    align-self: stretch;
+  }
+  .home .pop-destinations .destination-titles .title-container .recommend-title {
+    color: #303030;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    align-self: stretch;
+  }
+  .home .pop-destinations .card-container {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
+  .home .pop-destinations .card-container .col {
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .home .pop-destinations .card-container .col .destination-details {
+    display: flex;
+    width: 100%;
+    padding: 4px 6px;
+    align-items: flex-start;
+  }
+  .home .pop-destinations .card-container .col #background {
+    background-size: cover;
+    background-position: center;
+    height: 91px;
+    align-self: stretch;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+  }
+  .home .pop-destinations .card-container .col #background .destination-name {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    flex: 1 0 0;
+  }
+  .home .pop-destinations .card-container .col #background .from {
+    color: #FFF;
+    text-align: right;
+    right: 0;
+    font-family: Roboto;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    width: 26px;
+  }
+  .home .pop-destinations .card-container .col #background .destination-price {
+    color: var(--studio-darkmode-allwhite-ffffff, #FFF);
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    padding-right: 6px;
   }
   .home .pop-destinations .card-container .col:hover {
     transform: scale(1.1);

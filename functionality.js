@@ -19,9 +19,7 @@ hamburgerIcon.addEventListener("click", () => {
     }
 })
 
-document.addEventListener("DOMContentLoaded", () => {
-    WishList()
-});
+
 
 
 let col = document.getElementById("col");
@@ -100,13 +98,20 @@ if (savedSearches.length === 0) {
 
 }
 
-let wishlistActiveBtn = document.querySelector(".wishlist-active-btn");
-let wishlistfak = document.querySelector(".wishlist");
+
+document.addEventListener("DOMContentLoaded", () => {
+    WishList();
+});
+
+
+
+var wishlistActiveBtn = document.querySelector(".wishlist-active-btn" , ".side-nav .wishlist-active-btn");
+let wishlist = document.querySelector(".wishlist");
 
 function WishList(){
     wishlistActiveBtn.addEventListener("click", () => {
-        console.log("salam dostlaarrr");
-        wishlistfak.style.display = (wishlistfak.style.display === "flex") ? "none" : "flex";
+        console.log(wishlist);
+        wishlist.style.display = (wishlist.style.display === "flex") ? "none" : "flex";
     });
 }
 

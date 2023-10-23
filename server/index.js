@@ -80,7 +80,7 @@ app.get("/flights", async (req, res) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '85939b333bmsh4a53100b4f76aa1p1669adjsn1ae0093f641f',
+            'X-RapidAPI-Key': 'f01c53b3eemsh8cef012015dd028p146233jsna8f48e9e9461',
             'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
         }
     };

@@ -67,6 +67,34 @@
     display: block;
     cursor: pointer;
   }
+  .header .side-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    height: 50px;
+    padding: 5.5px 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    position: relative !important;
+  }
+  .header .logo {
+    width: 87px;
+    height: 16.5px;
+  }
+  .header .navbar {
+    display: none;
+  }
+  .header .hamburger-icon {
+    display: block;
+    cursor: pointer;
+  }
 }
 .footer {
   padding-top: 69px;
